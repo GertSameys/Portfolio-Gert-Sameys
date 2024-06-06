@@ -51,3 +51,11 @@ body {
 .navbar{
     background-color: --bulma-scheme-main;
 }
+
+#notification-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+    z-index: 1000;
+}

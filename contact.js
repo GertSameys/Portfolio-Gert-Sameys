@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init('n1OxJf_mszpXPvazP'); // Replace with your EmailJS user ID
+    emailjs.init('n1OxJf_mszpXPvazP');
 })();
 
 // Mobile menu
@@ -31,6 +31,20 @@ function clearError(inputElement) {
     control.querySelector('.icon.is-right').innerHTML = '';
     help.style.display = 'none';
     help.textContent = '';
+}
+
+// Function to show notifications
+function showNotification(message, type) {
+    const container = document.getElementById('notification-container');
+    const notification = document.createElement('div');
+    notification.className = `notification is-${type}`;
+    notification.innerText = message;
+
+    container.appendChild(notification);
+
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
 }
 
 // Form validation and submission
@@ -89,11 +103,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             message: message
         })
         .then(function(response) {
-            clearError(document.getElementById('contact-form'));
-            showError(document.getElementById('contact-form'), 'Your message has been sent successfully!', 'is-success');
-            document.getElementById('contact-form').reset(); // Reset the form after submission
+            showNotification('Your message has been sent successfully!', 'success');
+            document.getElementById('contact-form').reset();
         }, function(error) {
-            showError(document.getElementById('contact-form'), 'Failed to send the message. Please try again later.', 'is-danger');
+            showNotification('Failed to send the message. Please try again later.', 'danger');
         });
     }
 });
