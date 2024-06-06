@@ -1,0 +1,76 @@
+/* Add this to your CSS file */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    flex: 1;
+}
+
+.footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-outer{
+    background: linear-gradient(to right, blue, lightblue);
+    padding-bottom: 3px;
+}
+.navbar{
+    background-color: --bulma-scheme-main;
+}
+
+.navbar-item {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.5), 0 0 20px rgba(0, 150, 250, 0.5), 0 0 30px rgba(0, 107, 179, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.navbar-item:hover::before {
+    opacity: 1;
+}
+
+.navbar-item:hover {
+    color: #000000; /* Adjust this color as needed */
+    background-color: aqua;
+}
+
+/* Ensure columns stack on mobile */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Gert Sameys</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma-accordion/dist/css/bulma-accordion.min.css"
+  />
+  <link rel="stylesheet" href="projecten.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="nav-outer">
+    <nav class="navbar has-shadow">
+      <div class="navbar-brand">
+        <a class="navbar-item"> Gert Sameys </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="curriculum.html">Curriculum Vitae</a>
+          <a class="navbar-item" href="projecten.html">Projects</a>
+          <a class="navbar-item" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Body -->
+  <div class="content-container">
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">Projects</h1>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="subtitle has-text-centered">School Projects</h1>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter-desktop is-half-tablet is-half-mobile">
+            <a class="project-card" onclick="openModal('modal-javascript')">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/images/JavascriptForm.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Javascript Form</h1>
+                <div class="content">Javascript formulier met validaties</div>
+              </div>
+            </a>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet is-half-mobile">
+            <a class="project-card" onclick="openModal('modal-creator')">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/images/Diablo1_1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Character Creator</h1>
+                <div class="content">Simpele versie van een Character Creator, gemaakt met C# en WPF in .NET 3.1</div>
+              </div>
+            </a>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet is-half-mobile">
+            <a class="project-card" onclick="openModal('modal-website')">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/images/First_1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">First Website</h1>
+                <div class="content">Eerste website gemaakt met HTML en CSS</div>
+              </div>
+            </a>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet is-half-mobile">
+            <a class="project-card" onclick="openModal('modal-mobielapp')">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/images/Mobile1_1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">First Mobile app</h1>
+                <div class="content">Mobiele app om recepten op te halen, gemaakt met Angular en Ionic</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="subtitle has-text-centered">Stage Project</h1>
+        <div class="has-text-centered">
+          <a href="/images/Eindrapport_Sameys_Gert.pdf" download="Eindrapport_Sameys_Gert.pdf" class="button is-primary">
+            Eindrapport downloaden
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <a class="project-card" onclick="openModal('modal-master')">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/image-1694550577632.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Master Editor</h1>
+                <div class="content"></div>
+              </div>
+            </a>
+          </div>
+          <div class="column is-4">
+            <a class="project-card" onclick="openModal('modal-backend')">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/Screenshot 2024-05-30 163810.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Backend</h1>
+                <div class="content"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="subtitle has-text-centered">Future Projects</h1>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modals -->
+
+  <div class="modal" id="modal-javascript">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Javascript form</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Eerste school project met Javascript en validaties waarbij we een standaard formulier gemaakt hadden met Bootstrap en daar zelf de validaties moesten voorzien.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-creator">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Character Creator</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Een zelf gekozen project waarbij alle principes die we in het eerste jaar C# hebben gezien. Het project is een simpele Character Creator gebaseerd op het pc spel Diablo. Er wordt gebruik gemaakt van een lokale database.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-website">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Eerste website</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Mijn eerste multi page website gemaakt met HTML, CSS.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-mobielapp">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Mobiele app</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Een mobiele recepten app waarbij je via een api recepten kan ophalen via een trefwoord in te geven. Ook was er de mogelijkheid om met een Google account in te loggen en zelf recepten bij in de app te zetten. De app was ontwikkeld in Angular en Ionic en maakte gebruik van Firebase database en authenticatie.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-master">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Stage project Editor</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>De klant vroeg om een programma waar een 2D en/of 3D plan van een kamer of kamers kan ingeladen worden en daarna met behulp van het programma dat deze kamer(s) konden aangekleed worden met meubelen van de klant waar zij 3D modellen van hebben.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-backend">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Stage project Backend</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Voor het programma was er ook een backend nodig. Ik heb een server van scratch opgezet ment Ubuntu en Nginx. Daarna heb ik een database gemaakt PostgreSQL en een api in .NET 8.</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>Made by Gert Sameys with Bulma.io</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script src="projecten.js"></script>
+</body>
+</html>
